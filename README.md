@@ -1,42 +1,17 @@
-# mern-auth
+Here, is my MERN (Mongo, Express, React, Node) framework derived to do app.
 
-![Final App](https://i.postimg.cc/tybZb8dL/final-MERNAuth.gif)
-Minimal full-stack MERN app with authentication using passport and JWTs.
+It is necessary for the user to register their account before being eligible to access and view the website/app properly.
 
-This project uses the following technologies:
+The user will submit their login details via the front end of the app which will then be transferred via the Controler component (contained with the routes folder) to the back end of the app. Here, there will be a comparison to identify if the submitted details currently exist within the database, and then grant the appropriate access via a token as appropriate. If not, the details are stored, and the user is then issued the token.
 
-- [React](https://reactjs.org) and [React Router](https://reacttraining.com/react-router/) for frontend
-- [Express](http://expressjs.com/) and [Node](https://nodejs.org/en/) for the backend
-- [MongoDB](https://www.mongodb.com/) for the database
-- [Redux](https://redux.js.org/basics/usagewithreact) for state management between React components
+Upon entry to the app, the user will then be able to enter their relevant goals, and will do so via the front end with the GUI on offer.
 
-## Medium Series
+A MVC architecture was implemented for this app.
 
-- [Build a Login/Auth App with the MERN Stack — Part 1 (Backend)](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669)
-- [Build a Login/Auth App with the MERN Stack — Part 2 (Frontend & Redux Setup)](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-2-frontend-6eac4e38ee82)
-- [Build a Login/Auth App with the MERN Stack — Part 3 (Linking Redux with React Components)](https://blog.bitsrc.io/build-a-login-auth-app-with-the-mern-stack-part-3-react-components-88190f8db718)
+Model (the M) is provided for by the model folder.
+View (the V) is provided by the client folder.
+Controller (the C) is provided by the routes folder.
 
-## Configuration
+The view/client folder then provides the user interface and UX of the app, the front end of the website/app that the user interacts with.
+The routes folder contains the means of transmission and communication between the front and back end, providing the interchange of data as appropriate allowing for dsynamic data driven content.
 
-Make sure to add your own `MONGOURI` from your [mLab](http://mlab.com) database in `config/keys.js`.
-
-```javascript
-module.exports = {
-  mongoURI: "YOUR_MONGO_URI_HERE",
-  secretOrKey: "secret"
-};
-```
-
-## Quick Start
-
-```javascript
-// Install dependencies for server & client
-npm install && npm run client-install
-
-// Run client & server with concurrently
-npm run dev
-
-// Server runs on http://localhost:5000 and client on http://localhost:3000
-```
-
-For deploying to Heroku, please refer to [this](https://www.youtube.com/watch?v=71wSzpLyW9k) helpful video by TraversyMedia.
